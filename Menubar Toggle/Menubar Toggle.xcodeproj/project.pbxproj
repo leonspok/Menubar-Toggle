@@ -1,0 +1,310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E39CF8221BB805CE0036A8E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E39CF8211BB805CE0036A8E8 /* AppDelegate.m */; };
+		E39CF8251BB805CE0036A8E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E39CF8241BB805CE0036A8E8 /* main.m */; };
+		E39CF8271BB805CE0036A8E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E39CF8261BB805CE0036A8E8 /* Assets.xcassets */; };
+		E39CF82A1BB805CE0036A8E8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E39CF8281BB805CE0036A8E8 /* MainMenu.xib */; };
+		E39CF8361BB826B60036A8E8 /* NSImage+Luminance.m in Sources */ = {isa = PBXBuildFile; fileRef = E39CF8351BB826B60036A8E8 /* NSImage+Luminance.m */; settings = {ASSET_TAGS = (); }; };
+		E39CF8391BB82B3E0036A8E8 /* LPWallpaperObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = E39CF8381BB82B3E0036A8E8 /* LPWallpaperObserver.m */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E39CF81D1BB805CE0036A8E8 /* Menubar Toggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Menubar Toggle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E39CF8201BB805CE0036A8E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E39CF8211BB805CE0036A8E8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E39CF8241BB805CE0036A8E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E39CF8261BB805CE0036A8E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E39CF8291BB805CE0036A8E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E39CF82B1BB805CE0036A8E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E39CF8341BB826B60036A8E8 /* NSImage+Luminance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Luminance.h"; sourceTree = "<group>"; };
+		E39CF8351BB826B60036A8E8 /* NSImage+Luminance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Luminance.m"; sourceTree = "<group>"; };
+		E39CF8371BB82B3E0036A8E8 /* LPWallpaperObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPWallpaperObserver.h; sourceTree = "<group>"; };
+		E39CF8381BB82B3E0036A8E8 /* LPWallpaperObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPWallpaperObserver.m; sourceTree = "<group>"; };
+		E39CF83C1BB834E10036A8E8 /* Menubar Toggle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Menubar Toggle.entitlements"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E39CF81A1BB805CE0036A8E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E39CF8141BB805CE0036A8E8 = {
+			isa = PBXGroup;
+			children = (
+				E39CF81F1BB805CE0036A8E8 /* Menubar Toggle */,
+				E39CF81E1BB805CE0036A8E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E39CF81E1BB805CE0036A8E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E39CF81D1BB805CE0036A8E8 /* Menubar Toggle.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E39CF81F1BB805CE0036A8E8 /* Menubar Toggle */ = {
+			isa = PBXGroup;
+			children = (
+				E39CF83C1BB834E10036A8E8 /* Menubar Toggle.entitlements */,
+				E39CF8341BB826B60036A8E8 /* NSImage+Luminance.h */,
+				E39CF8351BB826B60036A8E8 /* NSImage+Luminance.m */,
+				E39CF8371BB82B3E0036A8E8 /* LPWallpaperObserver.h */,
+				E39CF8381BB82B3E0036A8E8 /* LPWallpaperObserver.m */,
+				E39CF8201BB805CE0036A8E8 /* AppDelegate.h */,
+				E39CF8211BB805CE0036A8E8 /* AppDelegate.m */,
+				E39CF8261BB805CE0036A8E8 /* Assets.xcassets */,
+				E39CF8281BB805CE0036A8E8 /* MainMenu.xib */,
+				E39CF82B1BB805CE0036A8E8 /* Info.plist */,
+				E39CF8231BB805CE0036A8E8 /* Supporting Files */,
+			);
+			path = "Menubar Toggle";
+			sourceTree = "<group>";
+		};
+		E39CF8231BB805CE0036A8E8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E39CF8241BB805CE0036A8E8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E39CF81C1BB805CE0036A8E8 /* Menubar Toggle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E39CF82E1BB805CE0036A8E8 /* Build configuration list for PBXNativeTarget "Menubar Toggle" */;
+			buildPhases = (
+				E39CF8191BB805CE0036A8E8 /* Sources */,
+				E39CF81A1BB805CE0036A8E8 /* Frameworks */,
+				E39CF81B1BB805CE0036A8E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Menubar Toggle";
+			productName = "Menubar Toggle";
+			productReference = E39CF81D1BB805CE0036A8E8 /* Menubar Toggle.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E39CF8151BB805CE0036A8E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Leonspok;
+				TargetAttributes = {
+					E39CF81C1BB805CE0036A8E8 = {
+						CreatedOnToolsVersion = 7.0;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = E39CF8181BB805CE0036A8E8 /* Build configuration list for PBXProject "Menubar Toggle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E39CF8141BB805CE0036A8E8;
+			productRefGroup = E39CF81E1BB805CE0036A8E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E39CF81C1BB805CE0036A8E8 /* Menubar Toggle */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E39CF81B1BB805CE0036A8E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E39CF8271BB805CE0036A8E8 /* Assets.xcassets in Resources */,
+				E39CF82A1BB805CE0036A8E8 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E39CF8191BB805CE0036A8E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E39CF8251BB805CE0036A8E8 /* main.m in Sources */,
+				E39CF8391BB82B3E0036A8E8 /* LPWallpaperObserver.m in Sources */,
+				E39CF8361BB826B60036A8E8 /* NSImage+Luminance.m in Sources */,
+				E39CF8221BB805CE0036A8E8 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E39CF8281BB805CE0036A8E8 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E39CF8291BB805CE0036A8E8 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E39CF82C1BB805CE0036A8E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E39CF82D1BB805CE0036A8E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E39CF82F1BB805CE0036A8E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Menubar Toggle/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leonspok.osx.Menubar-Toggle";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E39CF8301BB805CE0036A8E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Menubar Toggle/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leonspok.osx.Menubar-Toggle";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E39CF8181BB805CE0036A8E8 /* Build configuration list for PBXProject "Menubar Toggle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E39CF82C1BB805CE0036A8E8 /* Debug */,
+				E39CF82D1BB805CE0036A8E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E39CF82E1BB805CE0036A8E8 /* Build configuration list for PBXNativeTarget "Menubar Toggle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E39CF82F1BB805CE0036A8E8 /* Debug */,
+				E39CF8301BB805CE0036A8E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E39CF8151BB805CE0036A8E8 /* Project object */;
+}
