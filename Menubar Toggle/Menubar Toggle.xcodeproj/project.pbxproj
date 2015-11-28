@@ -11,8 +11,8 @@
 		E39CF8251BB805CE0036A8E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E39CF8241BB805CE0036A8E8 /* main.m */; };
 		E39CF8271BB805CE0036A8E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E39CF8261BB805CE0036A8E8 /* Assets.xcassets */; };
 		E39CF82A1BB805CE0036A8E8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E39CF8281BB805CE0036A8E8 /* MainMenu.xib */; };
-		E39CF8361BB826B60036A8E8 /* NSImage+Luminance.m in Sources */ = {isa = PBXBuildFile; fileRef = E39CF8351BB826B60036A8E8 /* NSImage+Luminance.m */; settings = {ASSET_TAGS = (); }; };
-		E39CF8391BB82B3E0036A8E8 /* LPWallpaperObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = E39CF8381BB82B3E0036A8E8 /* LPWallpaperObserver.m */; settings = {ASSET_TAGS = (); }; };
+		E39CF8361BB826B60036A8E8 /* NSImage+Luminance.m in Sources */ = {isa = PBXBuildFile; fileRef = E39CF8351BB826B60036A8E8 /* NSImage+Luminance.m */; };
+		E39CF8391BB82B3E0036A8E8 /* LPWallpaperObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = E39CF8381BB82B3E0036A8E8 /* LPWallpaperObserver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */

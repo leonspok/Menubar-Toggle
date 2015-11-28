@@ -13,16 +13,27 @@
 @property (strong, nonatomic) NSStatusItem *statusItem;
 @property (weak) IBOutlet NSMenu *menu;
 @property (weak) IBOutlet NSMenuItem *enabledItem;
+@property (weak) IBOutlet NSMenuItem *infoItem;
 @property (weak) IBOutlet NSMenuItem *startAtLoginItem;
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    [self enableStatusItem];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setMenuBarDarkThemeLogo) name:kThemeChangedToDarkNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setMenuBarLightThemeLogo) name:kThemeChangedToLightNotification object:nil];
+}
+
+- (void)enableStatusItem {
+    [self hideIcon:self];
+    
     _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     _statusItem.title = @"";
     _statusItem.toolTip = @"Menubar Toggle";
     _statusItem.menu = self.menu;
+    _statusItem.menu.autoenablesItems = NO;
     
     if ([[LPWallpaperObserver sharedObserver] isDarkModeEnabled]) {
         [self setMenuBarDarkThemeLogo];
@@ -30,11 +41,14 @@
         [self setMenuBarLightThemeLogo];
     }
     
+    [self.infoItem setTitle:[NSString stringWithFormat:@"ver %@ (Build %@)", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"], [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]]];
+    
     [self.enabledItem setState:[LPWallpaperObserver sharedObserver].autoSwithOSXTheme? NSOnState : NSOffState];
     [self.startAtLoginItem setState:[self willStartAtLogin]? NSOnState : NSOffState];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setMenuBarDarkThemeLogo) name:kThemeChangedToDarkNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setMenuBarLightThemeLogo) name:kThemeChangedToLightNotification object:nil];
+}
+
+- (void)applicationWillBecomeActive:(NSNotification *)notification {
+    [self enableStatusItem];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -108,6 +122,14 @@
     }
     
     [self.startAtLoginItem setState:[self willStartAtLogin]? NSOnState : NSOffState];
+}
+
+- (IBAction)hideIcon:(id)sender {
+    if (!_statusItem) {
+        return;
+    }
+    [[NSStatusBar systemStatusBar] removeStatusItem:_statusItem];
+    _statusItem = nil;
 }
 
 @end
