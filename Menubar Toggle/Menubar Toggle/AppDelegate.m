@@ -41,7 +41,7 @@
         [self setMenuBarLightThemeLogo];
     }
     
-    [self.infoItem setTitle:[NSString stringWithFormat:@"ver %@ (Build %@)", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"], [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]]];
+    [self.infoItem setTitle:[NSString stringWithFormat:@"ver %@ (Build %@)", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"], [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]]];
     
     [self.enabledItem setState:[LPWallpaperObserver sharedObserver].autoSwithOSXTheme? NSOnState : NSOffState];
     [self.startAtLoginItem setState:[self willStartAtLogin]? NSOnState : NSOffState];

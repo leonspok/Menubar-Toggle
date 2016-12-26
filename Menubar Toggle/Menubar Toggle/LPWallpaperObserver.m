@@ -83,15 +83,13 @@ static NSString *const kImagesLuminanceInfoPlistFileName = @"imagesLuminance.pli
 }
 
 - (BOOL)isDarkModeEnabled {
-    NSString *mode = [[NSUserDefaults standardUserDefaults] stringForKey:@"AppleInterfaceStyle"];
-    return mode && [[mode uppercaseString] rangeOfString:@"DARK"].location != NSNotFound;
+	NSAppleScript *script = [[NSAppleScript alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"get_theme" withExtension:@"txt"] error:nil];
+	NSAppleEventDescriptor *dsc = [script executeAndReturnError:nil];
+	return dsc.booleanValue;
 }
 
 - (void)resetTheme {
-    CFPreferencesSetValue((CFStringRef)@"AppleInterfaceStyle", NULL, kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost);
-    dispatch_async(dispatch_get_main_queue(), ^{
-        CFNotificationCenterPostNotification(CFNotificationCenterGetDistributedCenter(), (CFStringRef)@"AppleInterfaceThemeChangedNotification", NULL, NULL, YES);
-    });
+	[self setDarkTheme:NO];
 }
 
 #pragma mark Wallpapers Observing
@@ -109,43 +107,17 @@ static NSString *const kImagesLuminanceInfoPlistFileName = @"imagesLuminance.pli
 }
 
 - (void)setDarkTheme:(BOOL)dark {
-    if (dark) {
-        NSTask *task = [[NSTask alloc] init];
-        task.launchPath = @"/usr/bin/defaults";
-        task.arguments = @[@"write", @"NSGlobalDomain", @"AppleInterfaceStyle", @"Dark"];
-        [task launch];
-        CFPreferencesSetValue((CFStringRef)@"AppleInterfaceStyle", (__bridge CFPropertyListRef)(@"Dark"), kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost);
-        dispatch_async(dispatch_get_main_queue(), ^{
-            CFNotificationCenterPostNotification(CFNotificationCenterGetDistributedCenter(), (CFStringRef)@"AppleInterfaceThemeChangedNotification", NULL, NULL, YES);
-            [[NSNotificationCenter defaultCenter] postNotificationName:kThemeChangedToDarkNotification object:nil];
-        });
-    } else if (!dark) {
-        BOOL wasDark = [self isDarkModeEnabled];
-        
-        NSTask *task = [[NSTask alloc] init];
-        task.launchPath = @"/usr/bin/defaults";
-        task.arguments = @[@"remove", @"NSGlobalDomain", @"AppleInterfaceStyle"];
-        [task launch];
-        CFPreferencesSetValue((CFStringRef)@"AppleInterfaceStyle", NULL, kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost);
-        
-        if (wasDark) {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                NSTask *task = [[NSTask alloc] init];
-                task.launchPath = @"/usr/bin/defaults";
-                task.arguments = @[@"remove", @"NSGlobalDomain", @"AppleInterfaceStyle"];
-                [task launch];
-                CFPreferencesSetValue((CFStringRef)@"AppleInterfaceStyle", NULL, kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost);
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    CFNotificationCenterPostNotification(CFNotificationCenterGetDistributedCenter(), (CFStringRef)@"AppleInterfaceThemeChangedNotification", NULL, NULL, YES);
-                    [[NSNotificationCenter defaultCenter] postNotificationName:kThemeChangedToLightNotification object:nil];
-                });
-            });
-        }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            CFNotificationCenterPostNotification(CFNotificationCenterGetDistributedCenter(), (CFStringRef)@"AppleInterfaceThemeChangedNotification", NULL, NULL, YES);
-            [[NSNotificationCenter defaultCenter] postNotificationName:kThemeChangedToLightNotification object:nil];
-        });
-    }
+	NSString *scriptSource = [[NSString alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"change_theme" withExtension:@"txt"] encoding:NSUTF8StringEncoding error:nil];
+	scriptSource = [scriptSource stringByReplacingOccurrencesOfString:@"<mode>" withString:(dark? @"true" : @"false")];
+	NSAppleScript *script = [[NSAppleScript alloc] initWithSource:scriptSource];
+	[script executeAndReturnError:nil];
+	dispatch_async(dispatch_get_main_queue(), ^{
+		if (dark) {
+			[[NSNotificationCenter defaultCenter] postNotificationName:kThemeChangedToDarkNotification object:nil];
+		} else {
+			[[NSNotificationCenter defaultCenter] postNotificationName:kThemeChangedToLightNotification object:nil];
+		}
+	});
 }
 
 - (void)setSuitableThemeIfNeeded {

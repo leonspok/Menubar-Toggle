@@ -13,6 +13,8 @@
 		E39CF82A1BB805CE0036A8E8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E39CF8281BB805CE0036A8E8 /* MainMenu.xib */; };
 		E39CF8361BB826B60036A8E8 /* NSImage+Luminance.m in Sources */ = {isa = PBXBuildFile; fileRef = E39CF8351BB826B60036A8E8 /* NSImage+Luminance.m */; };
 		E39CF8391BB82B3E0036A8E8 /* LPWallpaperObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = E39CF8381BB82B3E0036A8E8 /* LPWallpaperObserver.m */; };
+		E3CBFB521E11224B004D51A6 /* change_theme.txt in Resources */ = {isa = PBXBuildFile; fileRef = E3CBFB511E11224B004D51A6 /* change_theme.txt */; };
+		E3CBFB541E11227D004D51A6 /* get_theme.txt in Resources */ = {isa = PBXBuildFile; fileRef = E3CBFB531E11227D004D51A6 /* get_theme.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		E39CF8371BB82B3E0036A8E8 /* LPWallpaperObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPWallpaperObserver.h; sourceTree = "<group>"; };
 		E39CF8381BB82B3E0036A8E8 /* LPWallpaperObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPWallpaperObserver.m; sourceTree = "<group>"; };
 		E39CF83C1BB834E10036A8E8 /* Menubar Toggle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Menubar Toggle.entitlements"; sourceTree = "<group>"; };
+		E3CBFB511E11224B004D51A6 /* change_theme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = change_theme.txt; sourceTree = "<group>"; };
+		E3CBFB531E11227D004D51A6 /* get_theme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = get_theme.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 				E39CF8281BB805CE0036A8E8 /* MainMenu.xib */,
 				E39CF82B1BB805CE0036A8E8 /* Info.plist */,
 				E39CF8231BB805CE0036A8E8 /* Supporting Files */,
+				E3CBFB511E11224B004D51A6 /* change_theme.txt */,
+				E3CBFB531E11227D004D51A6 /* get_theme.txt */,
 			);
 			path = "Menubar Toggle";
 			sourceTree = "<group>";
@@ -114,6 +120,8 @@
 				TargetAttributes = {
 					E39CF81C1BB805CE0036A8E8 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 6KXZX3AW22;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 0;
@@ -145,6 +153,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3CBFB521E11224B004D51A6 /* change_theme.txt in Resources */,
+				E3CBFB541E11227D004D51A6 /* get_theme.txt in Resources */,
 				E39CF8271BB805CE0036A8E8 /* Assets.xcassets in Resources */,
 				E39CF82A1BB805CE0036A8E8 /* MainMenu.xib in Resources */,
 			);
@@ -261,7 +271,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6KXZX3AW22;
 				INFOPLIST_FILE = "Menubar Toggle/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -274,7 +286,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6KXZX3AW22;
 				INFOPLIST_FILE = "Menubar Toggle/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
